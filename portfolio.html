@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+<title>Portfolio Riche Kimbuka</title>
+<style>
+  /* === GLOBAL === */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin:0; padding:0;
+    background-color:#fdfdfd;
+    color:#111;
+    transition: background 0.3s, color 0.3s;
+  }
+  a { text-decoration:none; }
+  h2 { color:#1E3A8A; margin-top:0; }
+  
+  /* === HEADER HERO === */
+  header {
+    display:flex; align-items:center; justify-content:space-between;
+    padding:20px 40px;
+    background:linear-gradient(90deg, #1E3A8A, #3B82F6);
+    color:white;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    box-shadow:0 4px 12px rgba(0,0,0,0.3);
+  }
+  header h1 { margin:0; font-size:2em; }
+  #logo { width:70px; height:70px; border-radius:50%; border:2px solid white; transition: transform 0.5s; }
+  #logo:hover { transform: rotate(15deg) scale(1.05); }
+
+  nav a {
+    color:white; margin-left:20px; padding:5px; position:relative; transition: color 0.3s;
+  }
+  nav a::after {
+    content:""; position:absolute; width:0; height:2px; left:0; bottom:0; background:white; transition:0.3s;
+  }
+  nav a:hover::after { width:100%; }
+  nav a.active { font-weight:bold; }
+
+
+  #modeToggle {
+    cursor:pointer; padding:5px 10px; background:white; color:#1E3A8A; border:none;
+    border-radius:5px; font-weight:bold; transition:0.3s; margin-left:10px;
+  }
+  #modeToggle:hover { background:#1E3A8A; color:white; }
+
+  /* === HERO SECTION === */
+  #hero {
+    height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center;
+    text-align:center; background:linear-gradient(135deg,#3B82F6,#1E3A8A); color:white; padding:0 20px;
+  }
+  #hero h1 { font-size:3em; margin-bottom:20px; animation: fadeInDown 1.5s ease-out; }
+  #hero p { font-size:1.2em; max-width:700px; animation: fadeInUp 1.5s ease-out; }
+
+  @keyframes fadeInDown { 0% {opacity:0; transform:translateY(-50px);} 100% {opacity:1; transform:translateY(0);} }
+  @keyframes fadeInUp { 0% {opacity:0; transform:translateY(50px);} 100% {opacity:1; transform:translateY(0);} }
+
+  /* === SECTIONS === */
+  section {
+    padding:100px 20px 50px 20px;
+    text-align:center;
+    max-width:1000px;
+    margin:auto;
+    opacity:0; transform:translateY(50px);
+    transition: all 0.8s ease-out;
+  }
+  section img {
+    width:100%; max-width:350px; margin:20px 0; border-radius:10px;
+    border:3px solid #1E3A8A;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  section img:hover { transform: scale(1.05); box-shadow:0 8px 20px rgba(0,0,0,0.3); }
+
+  /* === CARDS === */
+  .card-container { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:20px; }
+  .card {
+    background:white; border-radius:10px; padding:20px; box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    flex:1 1 280px; transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .card:hover { transform: translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.2); }
+  .card h3 { margin-top:0; color:#1E3A8A; }
+
+  /* === FOOTER === */
+  footer { text-align:center; padding:20px; background:#1E3A8A; color:white; margin-top:30px; }
+
+  /* === DARK MODE === */
+  body.dark { background:#111; color:#eee; }
+  body.dark section { background:none; }
+  body.dark .card { background:#222; box-shadow:0 4px 12px rgba(255,255,255,0.05); }
+  body.dark footer { background:#111; }
+</style>
+</head>
+<body>
+
+<header>
+  <div style="display:flex; align-items:center; gap:10px;">
+    <img src="https://i.ibb.co/jPLjVHpN/file-000000004c5071fd8db4cc536da37533.png" alt="Logo RK Globaltech" id="logo">
+    <h1>RK Globaltech</h1>
+  </div>
+  <div>
+    <nav id="menu">
+      <a href="#presentation" class="active">Présentation</a>
+      <a href="#developpement">Développement</a>
+      <a href="#design">Design</a>
+      <a href="#technologies">Technologies</a>
+      <a href="#marketing">Marketing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="modeToggle">🌙</button>
+  </div>
+</header>
+
+<!-- HERO SECTION -->
+<section id="hero">
+  <h1>Riche Kimbuka</h1>
+  <p>Jeune passionné par le numérique et ingénieur en informatique, découvrez mes compétences et projets dans différents domaines du numérique.</p>
+</section>
+
+<!-- PRÉSENTATION -->
+<section id="presentation">
+  <h2>Présentation</h2>
+  <img src="https://i.ibb.co/5dCSL9X/Gemini-Generated-Image-2vkaj42vkaj42vka-3.jpg" alt="Gemini-Generated-Image-2vkaj42vkaj42vka-3" border="0"></a>
+  <p>Bonjour, je suis <strong>Riche Kimbuka</strong>, également connu sous le nom de <em>monsieur l'entrepreneur</em>. Jeune passionné par le numérique et ingénieur en informatique, je vous invite à découvrir mes compétences et projets dans différents domaines du numérique.</p>
+</section>
+
+<!-- DÉVELOPPEMENT -->
+<section id="developpement" style="background-color:#F5F5F5;">
+  <h2>Développement et Programmation</h2>
+  <img src="https://i.ibb.co/d0MDmBMQ/7a13322a599e1835ea784050d12997b3.jpg" alt="Développement et programmation">
+  <div style="text-align:left; max-width:700px; margin:auto;">
+    <p>
+      En tant qu'ingénieur en informatique, je maîtrise de nombreux aspects du développement et de la programmation, 
+      depuis la création de sites web jusqu'au développement d'applications mobiles et logicielles.  
+      Voici un aperçu détaillé de mes compétences :  
+    </p>
+    <div class="card-container">
+      <div class="card">
+        <h3>Création de sites web</h3>
+        <p>Conception de sites modernes et interactifs avec <strong>HTML, CSS et JavaScript</strong>. Intégration de bibliothèques et frameworks tels que <strong>React</strong>. Optimisation responsive.</p>
+      </div>
+      <div class="card">
+        <h3>Applications mobiles</h3>
+        <p>Création d’applications pour <strong>Android et iOS</strong> avec Flutter ou React Native selon le projet.</p>
+      </div>
+      <div class="card">
+        <h3>Développement logiciel & Backend</h3>
+        <p>Python, Java, C++, C#, Node.js, PHP, Django. Création d’applications robustes et sécurisées.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESIGN -->
+<section id="design">
+  <h2>Graphisme et multimédia</h2>
+  <img src="https://i.ibb.co/wZ248gTS/20d0553288789c15da61571289e45930.jpg" alt="Design et multimédia">
+  <div style="text-align:left; max-width:700px; margin:auto;">
+    <p>La créativité est au cœur de mon approche dans le numérique. Je développe des compétences solides en design et multimédia.</p>
+    <div class="card-container">
+      <div class="card">
+        <h3>Graphisme</h3>
+        <p>Photoshop, Illustrator et création de logos et visuels professionnels.</p>
+      </div>
+      <div class="card">
+        <h3>UX/UI Design</h3>
+        <p>Interfaces intuitives et prototypes pour une expérience utilisateur optimale.</p>
+      </div>
+      <div class="card">
+        <h3>Montage multimédia</h3>
+        <p>Montage vidéo, animations et storytelling visuel pour captiver l’audience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNOLOGIES -->
+<section id="technologies" style="background-color:#F0F8FF;">
+  <h2>Technologies Émergentes</h2>
+  <img src="https://i.ibb.co/cXVZCX0y/48cdbe9208c19fa7375532655a1f55eb.jpg" alt="Technologies émergentes">
+  <div style="text-align:left; max-width:700px; margin:auto;">
+    <p>Toujours à l’avant-garde des innovations numériques, je m’intéresse aux technologies émergentes.</p>
+    <div class="card-container">
+      <div class="card">
+        <h3>Blockchain & Crypto</h3>
+        <p>Smart contracts et applications décentralisées.</p>
+      </div>
+      <div class="card">
+        <h3>Réalité Virtuelle & Augmentée</h3>
+        <p>Contenus immersifs et interactifs pour VR/AR.</p>
+      </div>
+      <div class="card">
+        <h3>IoT & Trading</h3>
+        <p>Systèmes connectés et utilisation des technologies numériques pour le trading.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARKETING -->
+<section id="marketing" style="background-color:#FFF5F5;">
+  <h2>Marketing Digital et E-commerce</h2>
+  <img src="https://i.ibb.co/z9sqFtj/39e6214125f033e68e8cd281c18e74d9.jpg" alt="Marketing digital et e-commerce">
+  <div style="text-align:left; max-width:700px; margin:auto;">
+    <p>Visibilité et stratégie marketing sont essentielles. Je développe des compétences en marketing digital et e-commerce.</p>
+    <div class="card-container">
+      <div class="card">
+        <h3>Sites e-commerce</h3>
+        <p>Boutiques sécurisées et navigation intuitive.</p>
+      </div>
+      <div class="card">
+        <h3>Réseaux sociaux & Publicité</h3>
+        <p>Gestion des campagnes et création de contenu impactant.</p>
+      </div>
+      <div class="card">
+        <h3>SEO & Analytics</h3>
+        <p>Optimisation, suivi et conversion des visiteurs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="padding:30px; text-align:center; background-color:#F5F5F5;">
+  <h2>Contact</h2>
+  <p>Vous souhaitez en savoir plus ou collaborer ? N’hésitez pas à me contacter !</p>
+<p>
+  <i class="fa-solid fa-envelope"></i>
+  Email : <a href="mailto:riche.kimbuka@gmail.com">riche.kimbuka@gmail.com</a><br>
+
+  <i class="fa-brands fa-whatsapp" style="color:#25D366;"></i>
+  WhatsApp : <a href="https://wa.me/243975629503" target="_blank">+243 975 629 503</a><br>
+
+  <i class="fa-brands fa-facebook" style="color:#1877F2;"></i>
+  Facebook : <a href="https://www.facebook.com/riche.kimbuka.37" target="_blank">Riche'b Kimbuka</a><br>
+  
+  <i class="fa-brands fa-instagram"
+  style="
+  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+"></i>
+  Instagram : <a href="https://www.instagram.com/riche_kimbuka?igsh=MTlsYmVleWdoZTBwNQ==" target="_blank">Riche_Kimbuka</a><br>
+  
+  <i class="fa-brands fa-tiktok"
+  style="color: ;"></i>
+  TikTok : <a href="https://www.tiktok.com" target="_blank">Riche'b Kimbuka</a>
+</p>
+</section>
+
+<footer>
+  &copy; 2026 Riche Kimbuka - Tous droits réservés
+</footer>
+
+<script>
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+  anchor.addEventListener('click', function(e){
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+  });
+});
+
+// Scroll animation
+const sections = document.querySelectorAll('section');
+const appearOnScroll = () => {
+  const trigger = window.innerHeight * 0.85;
+  sections.forEach(sec=>{
+    const top = sec.getBoundingClientRect().top;
+    if(top < trigger){
+      sec.style.opacity = 1;
+      sec.style.transform = 'translateY(0)';
+    }
+  });
+};
+window.addEventListener('scroll', appearOnScroll);
+appearOnScroll();
+
+// Active menu highlight
+const menuLinks = document.querySelectorAll('nav a');
+window.addEventListener('scroll', ()=>{
+  let current = '';
+  sections.forEach(sec=>{
+    const sectionTop = sec.offsetTop - 150;
+    if(pageYOffset >= sectionTop) current = sec.getAttribute('id');
+  });
+  menuLinks.forEach(a=>{ a.classList.remove('active'); if(a.getAttribute('href') === '#'+current) a.classList.add('active'); });
+});
+
+// Dark / Light mode
+const toggle = document.getElementById('modeToggle');
+toggle.addEventListener('click', ()=>{
+  document.body.classList.toggle('dark');
+  toggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+});
+
+// Console message
+console.log("%cBienvenue sur le portfolio de Riche Kimbuka ! 🚀", "color:#1E3A8A; font-size:20px; font-weight:bold;");
+</script>
+</body>
+</html>
